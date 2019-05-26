@@ -27,7 +27,7 @@ public class demo {
             res.setResData(resultData);
             return res;
         }
-//        net.sf.json.JSONObject obj = net.sf.json.JSONObject.fromObject(desData); //json对象字符串转json
+//        net.sf.json.JSONObject obj = net.sf.json.JSONObject.fromObject(desData); // json对象字符串转json
         resultData.put("data","success");
         res.setStatus(1);
         res.setMsg("成功");
