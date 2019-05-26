@@ -1,0 +1,10 @@
+# set server port
+server:
+  port: 8090  # 配置端口
+spring:
+  datasource: # set database config
+    url: jdbc:mysql://47.98.189.101:3306/itools?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 1234=Qwer
+    driver-class-name: com.mysql.jdbc.Driver
+
