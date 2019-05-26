@@ -3,7 +3,6 @@ package com.miaoc.itools.controller.demo;
 import com.alibaba.fastjson.JSONObject;
 import com.miaoc.itools.entity.base.ResBody;
 import com.miaoc.itools.utils.AESUtils;
-//import net.sf.json.JSONArray;
 import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin("*")
