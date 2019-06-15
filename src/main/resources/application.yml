@@ -8,3 +8,11 @@ spring:
     password: 1234=Qwer
     driver-class-name: com.mysql.jdbc.Driver
 
+  devtools:
+    livereload:
+      enabled : true
+message:
+  accesskeyid: accesskeyid
+  accesssecret: accesssecret
+  signname: 微快递
+  templatecode: SMS_138077924

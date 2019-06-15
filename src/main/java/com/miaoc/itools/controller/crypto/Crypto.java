@@ -1,4 +1,4 @@
-package com.miaoc.itools.controller.demo;
+package com.miaoc.itools.controller.crypto;
 
 import com.alibaba.fastjson.JSONObject;
 import com.miaoc.itools.entity.base.ResBody;
@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin("*")
 @RestController
 @RequestMapping("/app")
-public class demo {
+public class Crypto {
 
-    @RequestMapping(value = "/demo")
+    @RequestMapping(value = "/crypto")
     @ResponseBody
-    public ResBody demo(@RequestBody JSONObject req) throws Exception {
+    public ResBody crypto(@RequestBody JSONObject req) throws Exception {
         ResBody res = new ResBody();//返回值
         AESUtils aesUtils=new AESUtils();
         String model=(String) req.get("data");
@@ -20,14 +20,12 @@ public class demo {
         JSONObject resultData=new JSONObject();
         if(desData==null){
             resultData.put("data","failed");
-
             resultData=AESUtils.encrypt(resultData.toString());//json转string后加密
             res.setStatus(0);
             res.setMsg("失败");
             res.setResData(resultData);
             return res;
         }
-//        net.sf.json.JSONObject obj = net.sf.json.JSONObject.fromObject(desData); // json对象字符串转json
         resultData.put("data","success");
         res.setStatus(1);
         res.setMsg("成功");
