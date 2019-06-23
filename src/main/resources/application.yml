@@ -1,9 +1,9 @@
 # set server port
 server:
-  port: 8090  # 配置端口
+  port: 8091  # 配置端口
 spring:
   datasource: # set database config
-    url: jdbc:mysql://47.98.189.101:3306/itools?useUnicode=true&characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://localhost:3306/itools?useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: 1234=Qwer
     type: com.alibaba.druid.pool.DruidDataSource
@@ -22,13 +22,13 @@ mybatis-plus:
   type-aliases-package: com.xxxx.**.entity
   type-handlers-package: com.example.springbootdemo.typeHandler
   type-enums-package: com.miaoc.itools.enums #com.jxdinfo.hussar.common.constant.enums
-  global-config:
-    id-type: 3                                              # 0:数据库ID自增   1:用户输入id  2:全局唯一id(IdWorker)  3:全局唯一ID(uuid)
-    refresh-mapper: true
-    logic-delete-value: 0
-    logic-not-delete-value: 1
-    sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
-    db-column-underline: false                               #驼峰下划线转换
+#  global-config:
+#    id-type: 3                                              # 0:数据库ID自增   1:用户输入id  2:全局唯一id(IdWorker)  3:全局唯一ID(uuid)
+#    refresh-mapper: true
+#    logic-delete-value: 0
+#    logic-not-delete-value: 1
+#    sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+#    db-column-underline: false                               #驼峰下划线转换
 
   configuration:
     map-underscore-to-camel-case: false
